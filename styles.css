@@ -1,0 +1,475 @@
+@media screen and (max-width: 3000px){
+    :root {
+        --fs-xs-:.8rem;
+        --fs-sm-: 1rem;
+        --fs-md-: 1.2rem;
+        --fs-lg-: 1.5rem;
+        --fs-xl-: 2rem;
+        --fs-xxl-: 5rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    :root {
+        --fs-xs-:.7rem;
+        --fs-sm-: .9rem;
+        --fs-md-: 1rem;
+        --fs-lg-: 1.3rem;
+        --fs-xl-: 1.8rem;
+        --fs-xxl-: 4rem;
+    }
+}
+
+@media screen and (max-width: 550px){
+    :root {
+        --fs-xs-:.7rem;
+        --fs-sm-: .9rem;
+        --fs-md-: 1rem;
+        --fs-lg-: 1.3rem;
+        --fs-xl-: 1.7rem;
+        --fs-xxl-: 3rem;
+    }
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans';
+}
+
+section {
+    padding: 10px 130px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-sm-);
+    padding: 10px 30px;
+    max-height: 35px;
+}
+
+.hidden {
+    display:none !important
+}
+
+.small-text {
+    font-size: var(--fs-xs-)
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    margin-top:15px;
+    background-color: rgb(47, 47, 58);
+    border-radius: 5px;
+    border: none;
+    font-weight:600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0);;
+    color: rgb(47, 47, 58);
+    outline: 2px solid rgb(47, 47, 58);
+    transition: all 150ms ease;
+    font-weight: 700;
+}
+
+
+
+.logo {
+    font-family: 'Kaushan Script';
+    font-size: var(--fs-lg-);
+    margin-top: -7px;
+}
+
+.options {
+    display: flex; 
+    gap:20px;
+}
+
+a:hover {
+
+    text-decoration: underline;
+}
+
+/* =====================Drop Down Start==================== */
+.options-dd {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:120px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.872);
+    color: white;
+    padding: 12px;
+    border-radius:5px;
+    position: relative;
+    z-index: 998;
+}
+
+.dropdown-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top:3px;
+    cursor: pointer;
+    transition: all 250ms ease;
+    background-color: white;
+    z-index:999;
+}
+
+.dropdown-btn.active {
+    margin-top: 10px;
+    position: absolute;
+    right:30px;
+    background-color: transparent;
+}
+
+.options-dd a {
+    color: white;
+}
+
+.dd-bar {
+    width:25px;
+    height:3px;
+    border-radius:2px;
+    background-color:black;
+    transition: all 250ms ease;
+}
+
+.dd-bar::before,
+.dd-bar::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height:3px;
+    background-color:black;
+    border-radius: 5px;
+    transition: all 250ms ease;
+}
+
+.dd-bar::before {
+    transform: translateY(7px);
+
+}
+
+.dd-bar::after {
+    transform: translateY(-7px)
+}
+
+.dropdown-btn:not(.active):hover .dd-bar::before {
+    width: 12.5px;
+}
+.dropdown-btn:not(.active):hover .dd-bar::after {
+    width: 12.5px;
+    right:30px;
+}
+
+.dropdown-btn.active .dd-bar {
+    background-color: transparent;
+}
+
+.dropdown-btn.active .dd-bar::before {
+    transform: rotate(45deg);
+    background-color: #f3f4f6;
+}
+
+.dropdown-btn.active .dd-bar::after {
+    transform: rotate(-45deg);
+    background-color: #f3f4f6;
+}
+/* =====================Drop Down End==================== */
+
+/* =============top section start======================== */
+.top-section {
+    background-image: url(photos/small-background-img.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top-section h2,
+.top-section h2 span{
+    margin-top:70px;
+    font-size:var(--fs-xxl-);
+    color: rgb(47, 47, 58);
+}
+
+.top-section span {
+    display:block;
+    font-size: var(--fs-lg-);
+    margin-top: 15px;
+}
+
+/* =====banner===== */
+.banner {
+    color:white;
+    background-color: black;
+    width: 230px;
+    padding: 30px 15px;
+    margin-top: 90px;
+    border-radius: 5px;
+}
+
+.top-section .banner h2 {
+    font-size: var(--fs-md-);
+    color: white;
+    margin-top:30px;
+}
+
+.top-section .banner h2 span {
+    font-size: var(--fs-xl-);
+    color: white;
+    display: inline-block;
+    margin-top:0;
+}
+
+.banner h4 {
+    margin-top: 0px;
+    border-left: 3px solid white;
+    margin-left: -15px;
+    padding-left: 15px;
+    height:20px;
+
+}
+
+.banner button {
+    margin-top:40px;
+}
+
+.banner button:hover {
+    background-color: white;
+}
+/* =============top section end======================== */
+
+/* =============service section start======================== */
+
+.service-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.service {
+    max-width: 30%;
+}
+
+.service span{
+    font-size: var(--fs-md-);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: var(--fs-sm-)
+}
+
+.service-img {
+    margin-bottom: 5px;
+    width: 70px;
+}
+/* =============service section end======================== */
+
+/* =============momentum section start======================== */
+.momentum-section {
+    margin-top: 100px;
+    background-color: #d6a5741e;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.momentum-section div {
+    width: 40%;
+}
+
+.momentum-section h2 {
+    font-size: var(--fs-xl-);
+    margin-top: 100px;
+}
+
+.momentum-section p {
+    margin-top: 30px;
+}
+
+.momentum-section button {
+    margin: 30px 0;
+}
+
+.momentum-section img {
+    width: 150%;
+    margin-top: 0px;
+    height: 100%;
+    margin-left: -70px;
+}
+/* =============momentum section end======================== */
+
+/* =============worker section start======================== */
+.worker-section {
+    display:flex;
+    justify-content: space-between;
+}
+
+.worker {
+    margin-top: 100px;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.worker img {
+    width: 100%;
+}
+
+.worker-section .description-box {
+    width: 80%;
+    padding: 10px 20px;
+    position: relative;
+    background-color:rgb(47, 47, 58);
+    color: white;
+    text-align: center;
+    font-size: var(--fs-md-);
+    margin-top: -35px;
+    line-height: 1.2;
+}
+
+.worker span {
+    display: block;
+}
+/* =============worker section end======================== */
+
+/* =============lookbook section start======================== */
+.lookbook-section {
+    text-align: center;
+    background-color: #d6a5741e;
+}
+
+.lookbook-section h2 {
+    font-size: var(--fs-xl-);
+    color:black;
+    margin-top: 100px;
+    text-decoration: underline;
+}
+
+.img-row {
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    width: 33%;
+}
+
+.lookbook {
+    display:flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.small-img {
+    height: 237px;
+}
+
+.tall-img {
+    height: 474px;
+}
+
+.lookbook-section img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.overlay:hover {
+   background-color: rgb(0, 0, 0);
+}
+
+.lookbook-section img:hover {
+    opacity: .15;
+}
+
+
+/* =============lookbook section end======================== */
+
+
+@media screen and (max-width: 850px){
+    section {
+        padding: 10px 30px;
+    }
+
+    .background-top {
+        width: 500px;
+    }
+
+    .service-img {
+        width: 50px;
+    }
+
+    .momentum-section img {
+        width: 180%;
+    }
+
+    .worker-section .description-box {
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .top-section {
+        background-image: url(photos/small-background-img.jpg);
+        background-size: cover;
+    }
+
+    .background-top {
+        display: none;
+    }
+
+    .service-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-section div{
+        max-width: 80%;
+    }
+
+    .momentum-section img {
+        width: 200%;
+    }
+
+    .worker-section {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .worker {
+        margin-top: 100px;
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .small-img {
+        height: 157px;
+    }
+
+    .tall-img {
+        height: 314px;
+    }
+}
